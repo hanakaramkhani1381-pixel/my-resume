@@ -1,4 +1,6 @@
-/* فونت و پایه */
+/* ==========================
+   فونت و پایه
+========================== */
 body {
   font-family: "Vazir", sans-serif;
   direction: rtl;
@@ -9,7 +11,9 @@ body {
   padding-top: 60px;
 }
 
-/* هدر */
+/* ==========================
+   هدر
+========================== */
 header {
   background-color: #b5d3c5; /* سبز ماسچا روشن */
   color: #1e2b23;
@@ -19,7 +23,9 @@ header {
   margin-bottom: 30px;
 }
 
-/* منوی بالا */
+/* ==========================
+   منوی بالا
+========================== */
 nav a {
   text-decoration: none;
   color: #1e2b23;
@@ -36,7 +42,9 @@ nav a:hover {
   transform: translateY(-2px);
 }
 
-/* بخش‌های اصلی */
+/* ==========================
+   بخش‌های اصلی
+========================== */
 section {
   background-color: #ffffff;
   margin: 20px auto;
@@ -47,7 +55,124 @@ section {
   text-align: right;
 }
 
-/* شغل‌ها */
+
+/* ==========================
+   عکس پروفایل (دایره‌ای)
+========================== */
+.profile-pic {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%; /* گرد کردن کامل */
+  object-fit: cover; /* تنظیم عکس در قاب */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1); /* سایه‌ی لطیف */
+  margin-bottom: 15px;
+  border: 3px solid #8fc7a7; /* حاشیه سبز ملایم برای زیبایی */
+}
+
+
+/* ==========================
+   سوابق تحصیلی
+========================== */
+.education-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.edu-logo {
+  width: 40px; /* اندازه لوگو */
+  height: 40px;
+  object-fit: contain;
+  border-radius: 5px; /* اختیاری برای گرد شدن گوشه‌ها */
+}
+
+.education-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.education {
+  background-color: #f0f9f5; /* سبز ملایم مشابه سایت */
+  padding: 15px 20px;
+  border-radius: 10px;
+  border-right: 5px solid #8fc7a7; /* سبز ماسچا */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.education h3 {
+  margin: 0 0 5px 0;
+  color: #31745b;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.education p {
+  margin: 0;
+  color: #2b5e4e;
+  font-size: 15px;
+}
+
+/* پررنگ کردن معدل */
+.education p.gpa {
+  font-weight: bold;
+  font-size: 16px;
+  color: #1f4f3c; /* سبز تیره‌تر برای تاکید */
+  margin-top: 5px;
+}
+
+/* واکنش‌گرایی موبایل */
+@media (max-width: 600px) {
+  .education-container {
+    gap: 10px;
+  }
+}
+
+/* ==========================
+   دوره‌های آموزشی
+========================== */
+.courses-container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.course {
+  background-color: #f0f9f5; /* سبز ملایم مشابه سایت */
+  padding: 15px 20px;
+  border-radius: 10px;
+  border-right: 5px solid #8fc7a7; /* سبز ماسچا */
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+}
+
+.course h3 {
+  margin: 0 0 5px 0;
+  color: #31745b;
+  font-weight: bold;
+  font-size: 17px;
+}
+
+.course p {
+  margin: 3px 0;
+  font-weight: bold; /* تمام اطلاعات بولد */
+  color: #2b5e4e;
+  font-size: 14.5px;
+}
+
+/* واکنش‌گرایی موبایل */
+@media (max-width: 600px) {
+  .courses-container {
+    gap: 10px;
+  }
+}
+
+
+
+/* ==========================
+   شغل‌ها
+========================== */
 .job {
   background-color: #edf5f0;
   padding: 15px;
@@ -61,29 +186,66 @@ section {
   margin-bottom: 10px;
 }
 
-/* مهارت‌ها */
+/* ==========================
+   مهارت‌ها
+========================== */
 .skill {
-  margin: 15px 0;
+  margin-bottom: 20px;
 }
 
 .skill p {
   font-weight: bold;
+  margin: 0 0 5px 0;
 }
 
-.skill-bar {
-  background-color: #e2ebe7;
-  border-radius: 10px;
-  height: 10px;
-  overflow: hidden;
+/* کانتینر جعبه‌های مهارت */
+.skill-boxes {
+  display: flex;
+  gap: 5px;
+  margin-top: 5px;
+  justify-content: flex-start;
 }
 
-.skill-level {
-  height: 100%;
-  background-color: #6bb89c; /* سبز ماسچا اصلی */
-  border-radius: 10px;
+/* کانتینر تمام مهارت‌ها */
+.skills-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* دو ستون مساوی */
+  gap: 20px; /* فاصله بین ستون‌ها و ردیف‌ها */
+  margin-top: 10px;
 }
 
-/* پروژه‌ها */
+/* خونه‌های مهارت */
+.box {
+  width: 30px;
+  height: 30px;
+  border: 2px solid #8fc7a7; /* سبز ماسچا پاستلی */
+  border-radius: 5px;
+  background-color: #fff;
+  transition: background-color 0.3s; /* فقط تغییر رنگ، بدون حرکت */
+}
+
+/* خونه پر شده */
+.box.filled {
+  background-color: #8fc7a7; /* سبز ماسچا پاستلی */
+}
+
+/* حذف افکت هاور روی خونه‌های پر شده */
+.box:hover {
+  transform: none;
+  cursor: default;
+}
+
+/* واکنش‌گرایی موبایل */
+@media (max-width: 500px) {
+  .box {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* ==========================
+   پروژه‌ها
+========================== */
 .project {
   background-color: #f0f9f5;
   padding: 15px;
@@ -97,7 +259,9 @@ section {
   margin-bottom: 10px;
 }
 
-/* فرم تماس */
+/* ==========================
+   فرم تماس
+========================== */
 form {
   width: 80%;
   margin: 0 auto;
@@ -113,6 +277,9 @@ input, textarea {
   background-color: #f9fbfa;
 }
 
+/* ==========================
+   دکمه‌ها
+========================== */
 button {
   background-color: #6bb89c;
   color: white;
@@ -129,7 +296,9 @@ button:hover {
   transform: translateY(-2px);
 }
 
-/* لینک‌ها */
+/* ==========================
+   لینک‌ها
+========================== */
 a[download] {
   display: inline-block;
   margin-top: 10px;
